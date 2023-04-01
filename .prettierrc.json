@@ -1,7 +1,19 @@
 {
   "trailingComma": "es5",
   "arrowParens": "always",
-  "bracketSpacing": true,
+
   "semi": true,
-  "singleQuote": true
+  "singleQuote": true,
+
+  "bracketSameLine": false,
+  "bracketSpacing": true,
+
+  "overrides": [
+    {
+      "files": ["**.*.scss", "*.scss"],
+      "options": {
+        "singleQuote": false
+      }
+    }
+  ]
 }

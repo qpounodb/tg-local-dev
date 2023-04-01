@@ -10,7 +10,7 @@ import packageJson from './package.json';
 import path from 'path';
 
 const SRC_PATH = path.resolve(__dirname, 'src');
-const PUBLIC_PATH = path.resolve(__dirname, 'public');
+const BUILD_PATH = path.resolve(__dirname, 'dist');
 
 const RULES_REGEXP = {
   svgComponents: /\.(component|c)\.svg$/,
@@ -31,7 +31,7 @@ export default defineConfig(({ mode }) => {
 
   return {
     base: '/',
-    publicDir: 'static',
+    publicDir: 'public',
     resolve: {
       alias: getTsconfigAliases(),
     },
@@ -48,7 +48,7 @@ export default defineConfig(({ mode }) => {
       https: true,
     },
     build: {
-      outDir: PUBLIC_PATH,
+      outDir: BUILD_PATH,
       assetsDir: 'static',
       sourcemap: 'hidden',
     },
