@@ -1,0 +1,25 @@
+@import "styles/colors";
+@import "styles/mixins";
+
+.wrapper {
+  @include text-4;
+  color: $white;
+  word-break: break-word;
+}
+
+.user {
+  font-weight: 500;
+  color: $light-grey;
+  padding-right: 8px;
+
+  &_accent {
+    color: $beige;
+  }
+}
+
+.crown {
+  color: $beige;
+  margin-right: 8px;
+  position: relative;
+  top: 4px;
+}

@@ -1,0 +1,54 @@
+@import "styles/colors";
+@import "styles/mixins";
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+
+  text-size-adjust: none; // отключаем увеличение текста на мобильных устройствах
+  -webkit-overflow-scrolling: touch; // для плавного скролла в старых версиях ios
+  -webkit-font-smoothing: antialiased; // сглаживание шрифтов
+  -webkit-tap-highlight-color: transparent; // отключаем выделение зажатых элементов в некоторых мобильных браузерах, чтобы не конфликтовало со стилями :active
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  background: $grey-to-black;
+  color: $black;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+$scrollbar-width: 6px;
+$scrollbar-radius: calc($scrollbar-width / 2);
+
+::-webkit-scrollbar {
+  width: $scrollbar-width;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: $scrollbar-radius;
+  background-color: rgba($color: $white, $alpha: 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: $scrollbar-radius;
+  background-color: $light-grey;
+}

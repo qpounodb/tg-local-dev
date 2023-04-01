@@ -1,0 +1,29 @@
+$black: #000;
+$white: #fff;
+$blue: #18a0fb;
+$beige: #f0c97e;
+$light-grey: #737373;
+$dark-grey: #323232;
+$red: #bf0404;
+$dark-red: #950505;
+
+$grey-to-black: linear-gradient(180deg, #2e2e2e, #121212);
+
+$red-to-dark-red-radial: radial-gradient(
+  50% 914.97% at 50% 50%,
+  #bf0404 0%,
+  #{$dark-red} 98.3%
+);
+$active-red-radial-gradient: radial-gradient(
+  50% 914.97% at 50% 50%,
+  #e40000 0%,
+  #ae0808 98.3%
+);
+$red-to-dark-red-linear: linear-gradient(
+  89.94deg,
+  #e00e0e 0.04%,
+  #{$dark-red} 106.93%
+);
+
+$red-shadow: inset 0 1px 20px rgba(147, 13, 13, 0.5);
+$beige-shadow: inset 0 1px 7px rgba(255, 255, 255, 0.7);

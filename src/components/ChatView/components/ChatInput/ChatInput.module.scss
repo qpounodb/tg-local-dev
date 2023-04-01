@@ -1,0 +1,42 @@
+@import "styles/colors";
+@import "styles/mixins";
+
+$offset: 10px;
+
+.wrapper {
+  position: relative;
+}
+
+.input {
+  width: 100%;
+  padding: $offset 40px $offset $offset;
+
+  border-radius: $offset;
+  background: $light-grey;
+
+  @include text-4;
+  color: $white;
+
+  &::placeholder {
+    color: inherit;
+    opacity: 0.5;
+  }
+}
+
+.button {
+  @include square(20px);
+  padding: 0;
+  border: none;
+  outline: none;
+  background: none;
+
+  position: absolute;
+  right: $offset;
+  top: $offset;
+
+  @include hover {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  @include animate(transform);
+}

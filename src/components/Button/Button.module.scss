@@ -1,0 +1,80 @@
+@import "styles/mixins.scss";
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  min-height: 56px;
+  box-sizing: border-box;
+  padding: 16px 24px;
+  border-radius: 10px;
+
+  &__title {
+    position: relative;
+
+    @include animate([opacity]);
+
+    &_hidden {
+      opacity: 0;
+    }
+  }
+
+  &_block {
+    width: 100%;
+  }
+
+  &_red {
+    background: $red-to-dark-red-radial;
+    box-shadow: $red-shadow;
+    color: $white;
+    position: relative;
+    font-weight: 500;
+
+    @include text-1;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: $active-red-radial-gradient;
+      opacity: 0;
+      border-radius: 10px;
+
+      @include square(100%);
+      @include animate([opacity]);
+    }
+
+    @include hover {
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
+
+  &_champagne {
+    background-color: $beige;
+    color: $dark-grey;
+
+    @include text-2;
+    @include animate([box-shadow]);
+
+    @include hover {
+      box-shadow: $beige-shadow;
+    }
+  }
+
+  &_outline {
+    border: 1px solid $white;
+    background: none;
+    color: $white;
+
+    @include text-2;
+    @include animate([opacity]);
+
+    @include hover {
+      opacity: 0.5;
+    }
+  }
+}

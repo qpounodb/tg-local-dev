@@ -1,0 +1,43 @@
+@import "styles/colors";
+@import "styles/mixins";
+
+.wrapper {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  row-gap: 3vh;
+
+  overflow: auto;
+}
+
+.header {
+  padding: 0;
+}
+
+.chat {
+  @include stretchedLayout;
+  mask-image: linear-gradient(to bottom, transparent, $black 10%);
+}
+
+.input {
+  padding-top: 2vh;
+
+  &_far {
+    padding-top: 7vh;
+  }
+
+  @include maxHeight(700px) {
+    padding-top: 1vh;
+
+    &_far {
+      padding-top: 4vh;
+    }
+  }
+
+  @include maxHeight(600px) {
+    padding-top: 0;
+
+    &_far {
+      padding-top: 2vh;
+    }
+  }
+}

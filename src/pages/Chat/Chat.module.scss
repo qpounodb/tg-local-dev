@@ -1,0 +1,30 @@
+@import "styles/mixins";
+
+.container {
+  height: 100%;
+  padding: $padding-top 0 7vh;
+
+  display: grid;
+  grid-template-rows: auto 1fr;
+  overflow: auto;
+
+  background: $grey-to-black;
+  color: $white;
+
+  @include maxHeight(700px) {
+    padding-bottom: 4vh;
+  }
+
+  @include maxHeight(600px) {
+    padding-bottom: 2vh;
+  }
+}
+
+.header {
+  padding-bottom: $padding-xl;
+}
+
+.chat {
+  @include stretchedLayout;
+  padding: $padding-xs $padding-xl;
+}

@@ -1,0 +1,13 @@
+@import "styles/colors";
+@import "styles/mixins";
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  @include text-1;
+  font-weight: 700;
+}

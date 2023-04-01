@@ -21,14 +21,17 @@
     "baseUrl": "./src",
     "typeRoots": ["node_modules/@types", "types"],
     "paths": {
+      "assets/*": ["assets/*"],
+      "configs/*": ["configs/*"],
       "components/*": ["components/*"],
-      "config/*": ["config/*"],
-      "img/*": ["img/*"],
       "pages/*": ["pages/*"],
-      "store/*": ["store/*"],
+      "models/*": ["models/*"],
+      "hooks/*": ["hooks/*"],
+      "stores/*": ["stores/*"],
       "styles/*": ["styles/*"],
       "types/*": ["types/*"],
       "utils/*": ["utils/*"],
+      "tests/*": ["tests/*"],
       "mocks/*": ["mocks/*"]
     }
   },

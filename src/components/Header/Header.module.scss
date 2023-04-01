@@ -1,0 +1,13 @@
+@import "styles/mixins.scss";
+
+.header {
+  @include with-side-padding;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.count {
+  @include text-4;
+  max-width: 120px;
+}

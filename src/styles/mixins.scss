@@ -1,0 +1,101 @@
+@import "@ktsstudio/mediaproject-style/dist/mixins";
+
+@import "styles/colors.scss";
+@import "styles/vars.scss";
+
+@keyframes appear-key-frames {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@mixin appear-animation($duration: 500, $delay: 0) {
+  animation: appear-key-frames #{$duration}ms #{$delay}ms linear backwards;
+}
+
+@mixin with-side-padding($offset: $padding-xl) {
+  padding: 0 $offset;
+}
+
+@mixin heading-1 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 110%;
+}
+
+@mixin text-1 {
+  font-size: 22px;
+  line-height: 127%;
+}
+
+@mixin text-2 {
+  font-size: 18px;
+  line-height: 133%;
+}
+
+@mixin text-3 {
+  font-size: 16px;
+  line-height: 112%;
+}
+
+@mixin text-4 {
+  font-size: 14px;
+  line-height: 130%;
+}
+
+@mixin button-text-1 {
+  font-size: 22px;
+  line-height: 26px;
+}
+
+@mixin red-gradient-text {
+  background: $red-to-dark-red-linear;
+  color: transparent;
+  background-clip: text;
+}
+
+@mixin red-radial-gradient-text {
+  background: $red-to-dark-red-radial;
+  color: transparent;
+  background-clip: text;
+}
+
+@mixin hover {
+  &:active {
+    @content;
+  }
+
+  &:hover {
+    @content;
+  }
+}
+
+@mixin reset-button {
+  padding: 0;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+@mixin stretchedLayout {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr);
+  overflow: auto;
+}
+
+@mixin shortScreen {
+  @media (min-aspect-ratio: 3/5) {
+    @content;
+  }
+}
+
+@mixin chat-button-footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: $padding-xs $padding-xl;
+}
