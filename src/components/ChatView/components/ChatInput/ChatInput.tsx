@@ -18,9 +18,13 @@ const ChatInput: React.FC<ChatInputProps> = ({ onSubmit }) => {
       return;
     }
 
+    event.stopPropagation();
     event.preventDefault();
     onSubmit?.(refInput.current.value.trim());
     refInput.current.value = '';
+
+    // ios fix
+    window.scrollTo({ top: 0 });
   }, []);
 
   return (
@@ -32,7 +36,7 @@ const ChatInput: React.FC<ChatInputProps> = ({ onSubmit }) => {
           placeholder={CHAT_INPUT_PLACEHOLDER}
           ref={refInput}
         />
-        <button className={s.button} onClick={handleSubmit}>
+        <button className={s.button} type="submit">
           <SendIcon />
         </button>
       </div>
