@@ -3,16 +3,19 @@ import * as React from 'react';
 import { Button } from 'components/Button';
 import { withErrorBoundary } from 'components/ErrorBoundary';
 import { Chat } from 'pages/Chat';
+import { ChatInputPage } from 'pages/ChatInputPage';
 import { Vite } from 'pages/Vite';
 
 import s from './Root.module.scss';
 
 enum PageEnum {
+  chatInput = 'chat input',
   chat = 'chat',
   vite = 'vite',
 }
 
 const pages: Record<PageEnum, React.FC> = {
+  [PageEnum.chatInput]: ChatInputPage,
   [PageEnum.chat]: Chat,
   [PageEnum.vite]: Vite,
 };

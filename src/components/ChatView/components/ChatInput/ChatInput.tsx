@@ -7,7 +7,7 @@ import { CHAT_INPUT_PLACEHOLDER } from 'configs/chat';
 import s from './ChatInput.module.scss';
 
 export type ChatInputProps = {
-  onSubmit: (value: string) => void;
+  onSubmit?: (value: string) => void;
 };
 
 const ChatInput: React.FC<ChatInputProps> = ({ onSubmit }) => {
@@ -19,7 +19,7 @@ const ChatInput: React.FC<ChatInputProps> = ({ onSubmit }) => {
     }
 
     event.preventDefault();
-    onSubmit(refInput.current.value.trim());
+    onSubmit?.(refInput.current.value.trim());
     refInput.current.value = '';
   }, []);
 
